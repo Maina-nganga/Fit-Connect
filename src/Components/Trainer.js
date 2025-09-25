@@ -5,7 +5,6 @@ export function Trainer() {
   const [trainers, setTrainers] = useState([]);
   const [search, setSearch] = useState("");
 
-  
   useEffect(() => {
     fetch("http://localhost:5000/trainers")
       .then((res) => res.json())
@@ -13,7 +12,6 @@ export function Trainer() {
       .catch((err) => console.error("Error fetching trainers:", err));
   }, []);
 
-  
   const filteredTrainers = trainers.filter((trainer) =>
     trainer.name.toLowerCase().includes(search.toLowerCase())
   );
@@ -22,16 +20,13 @@ export function Trainer() {
     <section id="trainers" className="py-20 bg-gray-800">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Expert Trainers
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Expert Trainers</h2>
           <div className="w-24 h-1 bg-red-500 mx-auto"></div>
           <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
             Our certified fitness professionals are here to help you reach your
             full potential.
           </p>
 
-        
           <input
             type="text"
             placeholder="Search trainers..."
@@ -45,7 +40,7 @@ export function Trainer() {
           {filteredTrainers.map((trainer) => (
             <div
               key={trainer.id}
-              className="bg-gray-900 rounded-lg overflow-hidden group"
+              className="bg-gray-900 rounded-lg overflow-hidden group shadow-lg"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -56,24 +51,39 @@ export function Trainer() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                   <div className="p-6 w-full">
                     <div className="flex justify-center space-x-4">
-                      <a
-                        href="#"
-                        className="bg-gray-800 p-2 rounded-full hover:bg-red-500 transition-colors"
-                      >
-                        <Instagram size={20} />
-                      </a>
-                      <a
-                        href="#"
-                        className="bg-gray-800 p-2 rounded-full hover:bg-red-500 transition-colors"
-                      >
-                        <Twitter size={20} />
-                      </a>
-                      <a
-                        href="#"
-                        className="bg-gray-800 p-2 rounded-full hover:bg-red-500 transition-colors"
-                      >
-                        <Facebook size={20} />
-                      </a>
+                      {trainer.instagram && (
+                        <a
+                          href={trainer.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${trainer.name} Instagram`}
+                          className="bg-gray-800 p-2 rounded-full hover:bg-red-500 transition-colors"
+                        >
+                          <Instagram size={20} />
+                        </a>
+                      )}
+                      {trainer.twitter && (
+                        <a
+                          href={trainer.twitter}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${trainer.name} Twitter`}
+                          className="bg-gray-800 p-2 rounded-full hover:bg-red-500 transition-colors"
+                        >
+                          <Twitter size={20} />
+                        </a>
+                      )}
+                      {trainer.facebook && (
+                        <a
+                          href={trainer.facebook}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${trainer.name} Facebook`}
+                          className="bg-gray-800 p-2 rounded-full hover:bg-red-500 transition-colors"
+                        >
+                          <Facebook size={20} />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

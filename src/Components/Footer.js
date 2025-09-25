@@ -1,12 +1,20 @@
-import React from 'react'
-import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
+import React from "react";
+import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 
 export function Footer() {
+  
+  const socialLinks = {
+    facebook: "https://facebook.com/fitconnect",
+    twitter: "https://twitter.com/fitconnect",
+    instagram: "https://instagram.com/fitconnect",
+    youtube: "https://youtube.com/@fitconnect",
+  };
+
   return (
     <footer className="bg-gray-900 border-t border-gray-800">
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* Logo & About */}
+         
           <div>
             <h3 className="text-xl font-bold mb-4">
               FIT<span className="text-red-500">CONNECT</span>
@@ -16,34 +24,53 @@ export function Footer() {
               and expert guidance.
             </p>
             <div className="flex space-x-4">
-              <a
-                href="#"
-                className="bg-gray-800 hover:bg-red-500 p-2 rounded-full transition-colors"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="#"
-                className="bg-gray-800 hover:bg-red-500 p-2 rounded-full transition-colors"
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="#"
-                className="bg-gray-800 hover:bg-red-500 p-2 rounded-full transition-colors"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="#"
-                className="bg-gray-800 hover:bg-red-500 p-2 rounded-full transition-colors"
-              >
-                <Youtube size={20} />
-              </a>
+              {socialLinks.facebook && (
+                <a
+                  href={socialLinks.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="bg-gray-800 hover:bg-red-500 p-2 rounded-full transition-colors"
+                >
+                  <Facebook size={20} />
+                </a>
+              )}
+              {socialLinks.twitter && (
+                <a
+                  href={socialLinks.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter"
+                  className="bg-gray-800 hover:bg-red-500 p-2 rounded-full transition-colors"
+                >
+                  <Twitter size={20} />
+                </a>
+              )}
+              {socialLinks.instagram && (
+                <a
+                  href={socialLinks.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="bg-gray-800 hover:bg-red-500 p-2 rounded-full transition-colors"
+                >
+                  <Instagram size={20} />
+                </a>
+              )}
+              {socialLinks.youtube && (
+                <a
+                  href={socialLinks.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="bg-gray-800 hover:bg-red-500 p-2 rounded-full transition-colors"
+                >
+                  <Youtube size={20} />
+                </a>
+              )}
             </div>
           </div>
 
-          
           <div>
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -90,53 +117,19 @@ export function Footer() {
             </ul>
           </div>
 
-       
+          
           <div>
             <h3 className="text-lg font-bold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-red-500 transition-colors"
-                >
-                  Strength Training
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-red-500 transition-colors"
-                >
-                  Group Fitness
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-red-500 transition-colors"
-                >
-                  Personal Training
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-red-500 transition-colors"
-                >
-                  Nutrition Coaching
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-red-500 transition-colors"
-                >
-                  Wellness Programs
-                </a>
-              </li>
+              <li className="text-gray-400">Strength Training</li>
+              <li className="text-gray-400">Group Fitness</li>
+              <li className="text-gray-400">Personal Training</li>
+              <li className="text-gray-400">Nutrition Coaching</li>
+              <li className="text-gray-400">Wellness Programs</li>
             </ul>
           </div>
 
+   
           <div>
             <h3 className="text-lg font-bold mb-4">Opening Hours</h3>
             <ul className="space-y-2">
@@ -160,13 +153,13 @@ export function Footer() {
           </div>
         </div>
 
+       
         <div className="border-t border-gray-800 pt-8 mt-8 text-center text-gray-500">
           <p>&copy; {new Date().getFullYear()} FitConnect. All rights reserved.</p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
 export default Footer;
-
