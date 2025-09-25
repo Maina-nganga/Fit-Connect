@@ -1,5 +1,6 @@
-import React from 'react'
-import { MapPin, Phone, Mail, Clock } from 'lucide-react'
+import React from "react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+
 export function Contact() {
   return (
     <section id="contact" className="py-20 bg-gray-800">
@@ -74,6 +75,7 @@ export function Contact() {
                   placeholder="Your message"
                 ></textarea>
               </div>
+
               <button
                 type="submit"
                 className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md font-medium transition-colors w-full"
@@ -82,7 +84,10 @@ export function Contact() {
               </button>
             </form>
           </div>
+
+          
           <div>
+      
             <div className="bg-gray-900 rounded-lg p-8 mb-8">
               <h3 className="text-2xl font-bold mb-6">Information</h3>
               <div className="space-y-6">
@@ -94,10 +99,11 @@ export function Contact() {
                   <div>
                     <h4 className="font-medium mb-1">Location</h4>
                     <p className="text-gray-400">
-                      123 Fitness Street, New York, NY 10001
+                      1st Floor, Ngong Lane Plaza, Nairobi
                     </p>
                   </div>
                 </div>
+
                 <div className="flex items-start">
                   <Phone
                     size={24}
@@ -105,9 +111,10 @@ export function Contact() {
                   />
                   <div>
                     <h4 className="font-medium mb-1">Phone</h4>
-                    <p className="text-gray-400">(123) 456-7890</p>
+                    <p className="text-gray-400">+254 700 000000</p>
                   </div>
                 </div>
+
                 <div className="flex items-start">
                   <Mail
                     size={24}
@@ -115,9 +122,10 @@ export function Contact() {
                   />
                   <div>
                     <h4 className="font-medium mb-1">Email</h4>
-                    <p className="text-gray-400">info@powergym.com</p>
+                    <p className="text-gray-400">info@fitconnect.com</p>
                   </div>
                 </div>
+
                 <div className="flex items-start">
                   <Clock
                     size={24}
@@ -133,25 +141,32 @@ export function Contact() {
                 </div>
               </div>
             </div>
+
             <div className="bg-gray-900 rounded-lg p-8 h-64 relative overflow-hidden">
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
                   backgroundImage:
-                    "url('https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7CNew+York,NY&key=YOUR_API_KEY')",
-                  filter: 'grayscale(1) contrast(1.2) opacity(0.6)',
+                    "url('https://maps.googleapis.com/maps/api/staticmap?center=Moringa+School+Nairobi&zoom=15&size=600x300&maptype=roadmap&markers=color:red%7CMoringa+School+Nairobi&key=YOUR_API_KEY')",
+                  filter: "grayscale(1) contrast(1.2) opacity(0.6)",
                 }}
               ></div>
               <div className="relative z-10 h-full flex items-center justify-center">
-                <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-medium transition-colors">
-                  View on Google Maps
-                </button>
+                <a
+                  href="https://www.google.com/maps/place/Moringa+School/@-1.30072,36.78454,17z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-medium transition-colors">
+                    View on Google Maps
+                  </button>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
-  export default Contact;
+export default Contact;

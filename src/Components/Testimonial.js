@@ -19,7 +19,7 @@ const Testimonial = () => {
       image:
         'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
       quote:
-        "The group classes at PowerGym are incredible. I've tried many gyms before, but nothing compares to the energy and motivation I get here.",
+        "The group classes at Fitconnect are incredible. I've tried many gyms before, but nothing compares to the energy and motivation I get here.",
       rating: 5,
     },
     {
@@ -55,7 +55,7 @@ const Testimonial = () => {
           <div className="w-24 h-1 bg-red-500 mx-auto"></div>
           <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
             Hear from our community about their transformative experiences at
-            PowerGym.
+            Fitconnect.
           </p>
         </div>
         <div className="max-w-4xl mx-auto">

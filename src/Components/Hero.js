@@ -21,13 +21,21 @@ export function Hero() {
             healthier, stronger you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md font-medium text-lg transition-colors">
-              Get Started
-            </button>
-            <button className="border border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-md font-medium text-lg transition-colors flex items-center justify-center">
-              Learn More <ChevronRightIcon className="ml-2" size={20} />
-            </button>
-          </div>
+  <a
+    href="#membership"
+    className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md font-medium text-lg transition-colors text-center"
+  >
+    Get Started
+  </a>
+
+  <a
+    href="#services"
+    className="border border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-md font-medium text-lg transition-colors flex items-center justify-center"
+  >
+    Learn More <ChevronRightIcon className="ml-2" size={20} />
+  </a>
+</div>
+
         </div>
       </div>
     </section>

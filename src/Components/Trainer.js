@@ -1,15 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import { Instagram, Twitter, Facebook } from 'lucide-react'
+import React, { useState, useEffect } from "react";
+import { Instagram, Twitter, Facebook } from "lucide-react";
 
 export function Trainer() {
-  const [trainers, setTrainers] = useState([])
+  const [trainers, setTrainers] = useState([]);
+  const [search, setSearch] = useState("");
 
+  
   useEffect(() => {
-    fetch('http://localhost:5000/trainers')
+    fetch("http://localhost:5000/trainers")
       .then((res) => res.json())
       .then((data) => setTrainers(data))
-      .catch((err) => console.error('Error fetching trainers:', err))
-  }, [])
+      .catch((err) => console.error("Error fetching trainers:", err));
+  }, []);
+
+  
+  const filteredTrainers = trainers.filter((trainer) =>
+    trainer.name.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <section id="trainers" className="py-20 bg-gray-800">
@@ -23,10 +30,19 @@ export function Trainer() {
             Our certified fitness professionals are here to help you reach your
             full potential.
           </p>
+
+        
+          <input
+            type="text"
+            placeholder="Search trainers..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="mt-6 px-4 py-2 rounded-md w-full md:w-1/3 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-red-500"
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {trainers.map((trainer) => (
+          {filteredTrainers.map((trainer) => (
             <div
               key={trainer.id}
               className="bg-gray-900 rounded-lg overflow-hidden group"
@@ -72,7 +88,7 @@ export function Trainer() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Trainer
+export default Trainer;
