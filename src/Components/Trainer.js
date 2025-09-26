@@ -6,7 +6,7 @@ export function Trainer() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/trainers")
+    fetch("https://mp1a9cfd9f00c2aaadeb.free.beeceptor.com/trainers")
       .then((res) => res.json())
       .then((data) => setTrainers(data))
       .catch((err) => console.error("Error fetching trainers:", err));
