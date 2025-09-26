@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+FitConnect
+A modern and responsive React-based  fitness platform. FitConnect helps users explore services, view trainers, check membership plans, and connect with the gym through a clean, intuitive interface.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project includes search/filter functionality, responsive layouts, accessibility features, and modular components. The frontend is styled using TailwindCSS and bundled with React for performance and scalability.
+Author: Maina Nganga – Sept 2025
 
-## Available Scripts
+Table of Contents
+Features
+Live Preview
+Requirements
+Installation
+Project structure
+Demo  Sections
+Contributing and Making Changes
+License
+Contact Information
 
-In the project directory, you can run:
+Features
+Responsive design (desktop, tablet, mobile)
+Hero section with mission statement
+Search and filter trainers dynamically
+Membership pricing cards
+Services overview section
+Footer with social media integrations
+Built with React + TailwindCSS
+Accessible and optimized for performance
 
-### `npm start`
+Live Preview
+To view the live project:
+Visit:https://fit-connect1.netlify.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Requirements
+Node.js (>=16)
+npm or yarn
+React 18+
+TailwindCSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Installation
+Clone the repository:
+git clone https://https://github.com/Maina-nganga/Fit-Connect
+cd fitconnect
+Install dependencies:
+npm install
+Start the development server:
+npm start
+Build for production:
+npm run build
 
-### `npm test`
+Demo Sections:
+Home Page → Hero + About Us + Call to Action
+Trainers → Dynamic grid with search filter
+Services → Cards showcasing fitness programs
+Membership → Pricing tables with details
+Contact → Form + gym location
+Footer → Quick links + social media
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Contributing and Making Changes:
+Create a new branch in your terminal:
+git checkout -b feature-new-section
+Make necessary changes in the codebase.
+Run the app locally to test changes.
+Commit your changes:
+git commit -m "Add new section"
+Push to GitHub and open a pull request.
 
-### `npm run build`
+MIT License Copyright (c) 2025 Maina Nganga
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contact Information
+Email : ngangamaina091@gmail.com
